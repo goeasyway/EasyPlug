@@ -1,3 +1,6 @@
+# EasyPlug
+An Android Plugin Framework
+
 
 2015年Android的插件开发热情空前高涨，开源的插件框架也如雨后春笋，初步了解对比了一下各个开源框架，感觉各有千秋。因为面对不同的业务需求，所以在针对性和实现方式上都略有不同。
 
@@ -15,8 +18,6 @@
 
 # Demo
 如何确认EasyPlug是否合适你的项目使用，请直接看如下的例子，直接不做修改将百度和高德地图的DEMO做为插件。
-
-### [github下载](https://github.com/goeasyway/EasyPlug)
 
 我们写了三个个应用：
 1. 宿主APK：运行EasyPlug框架，负责安装卸载插件，插件的跳转入口。
