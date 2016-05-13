@@ -30,13 +30,11 @@ An Android Plugin Framework
 # 使用方法
 自己的项目中使用EasyPlug：
 
-1. 在build.gradle文件的dependencies加上
-compile 'net.goeasyway.easyand:easyplug:1.0.0'
-或者将框架的源码复制到自己的工程中。
+1. 将easyand模块的工程源码复制到自己的工程中。
 2. 在AndroidManifext.xml文件中加入你所有的插件APK需要的权限；
 3. 你的Application继承EasyPlug的BundleFrameworkApp(或者把它的回调方法中的代码复制到你的Application类中)。
 
-详细可以参照EasyDemo中的app工程。
+详细可以参照app工程。
 
 # TODO
 1. EasyPlug的框架开发指导系列文章。
