@@ -1,0 +1,55 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="net.goeasyway.easyand">
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+        >
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub"
+            android:label="ActivityStub"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub$SingleTaskStub1"
+            android:label="SingleTaskStub1"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub$SingleTaskStub2"
+            android:label="SingleTaskStub2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub$SingleTaskStub3"
+            android:label="SingleTaskStub3"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub$SingleTaskStub4"
+            android:label="SingleTaskStub4"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="net.goeasyway.easyand.bundle.container.ActivityStub$SingleTaskStub5"
+            android:label="SingleTaskStub5"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="net.goeasyway.easyand.bundle.container.BundleServiceContainer$Proxy1"
+            android:enabled="true" />
+        <service
+            android:name="net.goeasyway.easyand.bundle.container.BundleServiceContainer$Proxy2"
+            android:enabled="true" />
+        <service
+            android:name="net.goeasyway.easyand.bundle.container.BundleServiceContainer$Proxy3"
+            android:enabled="true" />
+        <service
+            android:name="net.goeasyway.easyand.bundle.container.BundleServiceContainer$Proxy4"
+            android:enabled="true" />
+        <service
+            android:name="net.goeasyway.easyand.bundle.container.BundleServiceContainer$Proxy5"
+            android:enabled="true" />
+    </application>
+
+</manifest>

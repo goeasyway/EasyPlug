@@ -1,0 +1,1 @@
+include ':app', ':easyand', ':bundle1'
