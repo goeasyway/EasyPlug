@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+
 
 android {
     compileSdkVersion 23
@@ -23,14 +25,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:support-v13:23.1.1'
 
-    compile 'com.google.code.gson:gson:2.4'
-
-    compile 'io.reactivex:rxjava:1.0.14'
-    compile 'io.reactivex:rxandroid:1.0.1'
-    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3' //依赖了 OkHttp,会自动下载okhttp
-    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta3'
-    compile 'io.realm:realm-android:0.87.4'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.squareup:otto:1.3.8'
+    //compile 'io.realm:realm-android:0.87.4'
 }
+

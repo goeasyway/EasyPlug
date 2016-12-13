@@ -88,7 +88,7 @@ public class Bundle {
     private PackageInfo getPackageInfo(BundleInfo bundleInfo) {
         PackageInfo packageInfo = null;
         Context hostContext = BundleManager.getInstance().getHostContext();
-        Realm realm = Realm.getInstance(hostContext);
+        Realm realm = Realm.getDefaultInstance();//Realm.getInstance(hostContext);
         RealmQuery<BundlePackageInfo> query = realm.where(BundlePackageInfo.class);
         BundlePackageInfo info = query.equalTo("packageName", bundleInfo.getPackageName()).findFirst();
         //从数据库获取的数据转换成PackageInfo

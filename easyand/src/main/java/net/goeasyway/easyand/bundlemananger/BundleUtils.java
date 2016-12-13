@@ -43,7 +43,8 @@ public class BundleUtils {
      */
     public static PackageInfo parseApk(Context hostContext, String apkPath) {
         PackageManager packageManager = hostContext.getPackageManager();
-        int flags = 0xFFFFFFFF;
+        int flags = PackageManager.GET_ACTIVITIES | PackageManager.GET_META_DATA
+                | PackageManager.GET_SERVICES | PackageManager.GET_SIGNATURES;;
         PackageInfo info = packageManager.getPackageArchiveInfo(apkPath, flags);
         if (info == null) {
             /**

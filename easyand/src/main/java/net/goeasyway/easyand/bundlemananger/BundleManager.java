@@ -103,6 +103,8 @@ public class BundleManager {
             }
         }
 
+        Realm.init(hostContext);
+
         loadBundles();
     }
 
@@ -120,7 +122,7 @@ public class BundleManager {
     private void loadBundles() {
         ArrayList<BundleInfo> exceptionBundles = new ArrayList<BundleInfo>(2);
 
-        Realm realm = Realm.getInstance(hostContext);
+        Realm realm = Realm.getDefaultInstance();//Realm.getInstance(hostContext);
         RealmResults<BundleInfo> infos = realm.where(BundleInfo.class).findAll();
 
         if (infos != null && infos.size() > 0) {
@@ -308,7 +310,7 @@ public class BundleManager {
      */
     private synchronized long generateBundleId() {
         long id = -1;
-        Realm realm = Realm.getInstance(hostContext);
+        Realm realm = Realm.getDefaultInstance();//Realm.getInstance(hostContext);
         long count = realm.where(BundleInfo.class).count();
         if (count > 0) {
             id = realm.where(BundleInfo.class).max("id").intValue() + 1;
@@ -387,7 +389,7 @@ public class BundleManager {
         if (info == null || info.getId() < 0) {
             return;
         }
-        Realm realm = Realm.getInstance(hostContext);
+        Realm realm = Realm.getDefaultInstance();//Realm.getInstance(hostContext);
         realm.beginTransaction();
         realm.copyToRealmOrUpdate(info);
         realm.commitTransaction();
@@ -518,7 +520,7 @@ public class BundleManager {
         if (info == null) {
             return;
         }
-        Realm realm = Realm.getInstance(hostContext);
+        Realm realm = Realm.getDefaultInstance();//Realm.getInstance(hostContext);
         RealmResults<BundleInfo> results = realm.where(BundleInfo.class).equalTo("packageName", info.getPackageName()).findAll();
         RealmResults<BundlePackageInfo> packageInfos = realm.where(BundlePackageInfo.class).equalTo("packageName", info.getPackageName()).findAll();
         realm.beginTransaction();
